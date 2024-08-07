@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <title>TOdo todooooo</title>
+
+        <link rel="icon" href="images/kermit.jpg">
+
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- Stile -->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <div class="container">
+        
+    
+    <!-- Intestazione -->
+   <header class="panel">
+    <h1>Kermit TodoList app</h1>
+    <img src="images/kermit.png" alt="Logo kermit" width="100px">
+   </header>
+
+   <!-- Sezione principale-->
+    <main>
+        <!-- Messaggio da mostrare se non ho attività-->
+         <p class="empty-list-message">Sembra che non ci siano attività</p>
+
+         <!-- Lista attività-->
+          <ul class="todo-list">
+            <li class="todo-item">
+                <div class="todo-check">
+                <img src="images/checked.png" alt="check icon" width="20px">
+            </div>
+            <div>
+                <p class="todo-text">Take Kermit</p>
+            </div>
+            </li>
+            <li class="todo-item">
+                <div class="todo-check">
+                <img src="images/checked.png" alt="check icon" width="20px">
+            </div>
+            <div>
+                <p class="todo-text">Love Kermit</p>
+            </div>
+            </li>
+          </ul>
+         
+        <!-- Pannello aggiunta attività -->
+    <div class="panel add-todo">
+        <input type="text" placeholder="Aggiungi attività">
+        <button>
+            <img src="images/kermit-logo.png" alt="kermit logo">
+        </button> 
+        <!-- <img src="images/kermit.jpg" alt="Bottone Kermit"> -->
+    </div>
+</main>
+</div>
+<!-- Javascript -->
+ <script src="script.js"></script>
+</body>
+</html>
