@@ -58,7 +58,15 @@ button {
     border: none;
     border-radius: 16px;
     background-color: rgb(217, 255, 102);
+}
 
+.reset-btn {
+    cursor: pointer;
+    background-color: rgb(255, 99, 99);
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    font-weight: bold;
 }
 
 /* Messagio di lista vuota */

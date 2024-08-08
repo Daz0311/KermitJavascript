@@ -1,7 +1,8 @@
 // - OPERAZIONI DA FARE AD AVVIO PAGINA
 
 // Recupero gli elementi di interesse nella pagina
-const button = document.querySelector('button');
+const kermitButton = document.getElementById('kermit-btn');
+const nukeButton = document.getElementById('reset-btn');
 const inputField = document.querySelector('input');
 const todoList = document.querySelector('.todo-list');
 const emptyListMessage = document.querySelector('.empty-list-message');
@@ -24,11 +25,21 @@ showContent();
 
 // - OPERAZIONI DINAMICHE
 // Reagisco al click del bottone
-button.addEventListener('click', function() {
+kermitButton.addEventListener('click', function() {
 // chiedo di aggiungere attività
 addActivity()
 });
 
+document.addEventListener("keydown", function(event)  {
+    if (event.key == "Enter") {
+        kermitButton.click();
+    }
+});
+
+// imposto nuke button
+nukeButton.addEventListener('click', function(){
+    resetActivity()
+});
 
 // - FUNZIONI
 // Funzione che decide cosa mostrare in pagina
@@ -100,6 +111,15 @@ showContent();
 inputField.value = "";
 }
 }
+
+function resetActivity() {
+    if (activities.length > 0) {
+        activities.length = 0;
+        localStorage.clear(STORAGE_KEY, JSON.stringify(activities));
+        console.log("reset clicked");
+        showContent();
+    }
+};
 
 // Funzione che crea un template HTMl per un'attività
 function createActivityTemplate(activity){
