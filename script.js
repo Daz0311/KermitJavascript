@@ -116,9 +116,13 @@ function resetActivity() {
     if (activities.length > 0) {
         activities.length = 0;
         localStorage.clear(STORAGE_KEY, JSON.stringify(activities));
-        console.log("reset clicked");
-        showContent();
+        todoList.innerHTML = activities;
+        emptyListMessage.innerText = "Nothing to be done for Kermit." 
+    } 
+    else {
+        emptyListMessage.innerText = "You can't nuke an empty list. Please, insert something to do for Kermit."
     }
+    
 };
 
 // Funzione che crea un template HTMl per un'attività
